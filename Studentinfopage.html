@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Student Info</title>
+
+        <!--link to external CSS file for styling-->
+        <link rel="stylesheet" href="Studentinfopage.css">
+    </head>
+
+    <body>
+
+        <!--these elements are empty initially and will be filled by JS-->
+        <h1 id="name"></h1>
+        <p id="major"></p>
+        <p id="email"></p>
+        <p id="gradDate"></p>
+
+        <!--JS section to insert student info-->
+        <script>
+
+            //declare variables with personal info
+            const name = "JJ Romano";
+            const major = "Advancing Computer Science";
+            const email = "jjromano@uat.edu";
+            const gradDate = "May 2027";
+            
+            //insert info into the HTML elements by id
+            document.getElementById("name").textContent = name;
+            document.getElementById("major").textContent =  `Major: ${major}`;
+            document.getElementById("email").textContent =  `Email: ${email}`;
+            document.getElementById("gradDate").textContent = `Graduation: ${gradDate}`;
+        </script>
+    </body>
+</html>
