@@ -1,0 +1,49 @@
+css 
+/* general styling to the whole page */
+body {
+  font-family: sans-serif;          /* default font */
+  background-color: #f0f0f0;        /* light gray background */
+  display: flex;                    /* centering */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;                    /* hieght of viewport */
+}
+
+/* Styles the white box that holds the image and buttons */
+.slideshow-container {
+  text-align: center;               /* centers contents inside */
+  background: white;                /* white background */
+  padding: 20px;                    /* space inside */
+  border-radius: 10px;              /* round corners */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);   /* drop shadow */
+}
+chat
+
+/* styles image */
+#slide {
+  width: 500px;                     /* fixed width */
+  height: auto;                     /* adjust hieght to keep ratio */
+  border-radius: 8px;               /* round corners */
+}
+
+/* adds space between images and buttons */
+.controls {
+  margin-top: 10px;
+}
+
+/* style for buttons */
+button {
+  padding: 10px 20px;                /* size of button */
+  font-size: 16px;                   /* text size */
+  margin: 0 10px;                    /* space between buttons */
+  border: none;                      /* no border */
+  background-color: #333;            /* dark background */
+  color: white;                      /* white text */
+  border-radius: 5px;                /* round corners */
+  cursor: pointer;                   /* pointer cursor on hover */
+}
+
+/* button hover effect */
+button:hover {
+  background-color: #555;
+}

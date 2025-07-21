@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+   slideshow.html
+   
+   Copyright 2025 JJ Romano <jjromano@MacBookPro>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- title of page -->
+  <title>Image Slideshow</title>
+  <!-- link to .css file -->
+  <link rel="stylesheet" href="slideshowstyle.css" />
+</head>
+<body>
+	<!-- Main slideshow container -->
+  <div class="slideshow-container">
+	  
+	  <!-- This is the image that will change using JavaScript -->
+    <img id="slide" src="images/image1.jpg" alt="Slideshow Image">
+    <div class="controls">
+		
+		<!-- buttons to go forward and back -->
+      <button onclick="prevImage()">⟵ Prev</button>
+      <button onclick="nextImage()">Next ⟶</button>
+    </div>
+  </div>
+
+<!-- link to .js file -->
+  <script src="slideshowscript.js"></script>
+</body>
+</html>
+
