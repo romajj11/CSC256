@@ -1,0 +1,37 @@
+/* Style the body */
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #f9f9f9;
+}
+
+/* Style for labels */
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+/* Style for input fields */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+/* Style for the submit button */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style for the output display */
+#output {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
