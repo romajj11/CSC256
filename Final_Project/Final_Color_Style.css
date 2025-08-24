@@ -1,0 +1,61 @@
+/* General styles and theme variables */
+:root{
+--bg: #0f1115;
+--panel: #141822;
+--muted: #8b94a7;
+--text: #e6e8ef;
+--brand: #FF912C; /* accent */
+--success: #2ecc71;
+--danger: #ff5a5f;
+--radius: 16px;
+--shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* Reset and base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;
+font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+background: linear-gradient(180deg, #0d0f14 0%, #0b0d12 100%);
+color:var(--text);
+}
+
+/* Header */
+header{ position:sticky; top:0; z-index:10; backdrop-filter: blur(8px); background:rgba(10,12,18,.6); border-bottom:1px solid rgba(255,255,255,.08); }
+.container{max-width:1100px; margin:0 auto; padding:16px 20px}
+.row{display:flex; align-items:center; gap:12px; justify-content:space-between}
+.title{display:flex; align-items:center; gap:10px; font-weight:800}
+.logo{display:grid; place-items:center; width:34px; height:34px; border-radius:10px; background:var(--brand); color:#111; font-weight:900}
+
+/* Buttons */
+.btn{ border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text); padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600; }
+.btn:hover{border-color:rgba(255,255,255,.28)}
+.btn.brand{background:var(--brand); color:#111; border:none}
+.btn.ghost{background:transparent}
+
+/* Layout */
+main{padding:22px 20px 40px}
+.grid{display:grid; grid-template-columns:repeat(5, 1fr); gap:16px;}
+@media (max-width: 900px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width: 560px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Swatch styles */
+.swatch{ display:flex; flex-direction:column; overflow:hidden; border-radius:var(--radius); background:var(--panel); box-shadow:var(--shadow); border:1px solid rgba(255,255,255,.08); }
+.swatch-color{aspect-ratio: 3/4; min-height:140px;}
+.swatch-meta{display:flex; align-items:center; justify-content:space-between; padding:12px; background:rgba(255,255,255,.03)}
+.hex{font-family: monospace; font-weight:700}
+.tools{display:flex; gap:8px}
+.iconbtn{display:grid; place-items:center; width:36px; height:36px; border-radius:10px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); cursor:pointer}
+.iconbtn[aria-pressed="true"]{background:rgba(255,255,255,.12); border-color:var(--brand)}
+
+/* Favorites */
+.favorites{ margin-top:28px; padding:18px; border:1px dashed rgba(255,255,255,.14); border-radius:16px; background:rgba(255,255,255,.02)}
+.fav-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:14px; margin-top:12px}
+.fav-card{border:1px solid rgba(255,255,255,.08); border-radius:14px; background:rgba(255,255,255,.03)}
+.fav-strip{display:grid; grid-template-columns:repeat(5,1fr); height:60px}
+.fav-meta{display:flex; align-items:center; justify-content:space-between; padding:10px}
+
+/* Toast notification */
+.toast{position:fixed; left:50%; bottom:22px; transform:translateX(-50%); background:#111; color:var(--text); padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.16); opacity:0; pointer-events:none; transition:opacity .25s ease}
+.toast.show{opacity:1}

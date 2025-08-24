@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+   Final_Color_PalGen.html
+   
+   Copyright 2025 JJ Romano <jjromano@MacBookPro>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<head>
+<meta charset="utf-8" />
+<title>Color Palette Maker</title>
+<meta name="generator" content="Geany 2.1" />
+<!-- Link to .css file -->
+<link rel="stylesheet" href="Final_Color_Style.css" />
+</head>
+
+<body>
+	
+<!-- Header with logo and navigation -->
+<button class="btn brand" id="generate">Generate New Palette (Space)</button>
+<button class="btn" id="save">Save Palette</button>
+<button class="btn" id="shuffleUnlocked">Shuffle Unlocked</button>
+<span class="subtle">Tip: Click a hex to edit. Double‑click a tile to lock/unlock.</span>
+</div>
+
+<!-- Palette grid -->
+<div class="grid" id="grid" aria-live="polite"></div>
+
+<!-- Favorites panel -->
+<div class="favorites" id="favorites-panel" hidden>
+<div class="row" style="justify-content:space-between">
+<strong>Saved Palettes</strong>
+<button class="btn" id="clearAll">Clear All</button>
+</div>
+<div class="fav-grid" id="favGrid"></div>
+</div>
+</section>
+
+<!-- About section -->
+<section id="about" style="margin-top:40px">
+<h3>About</h3>
+<p class="subtle">Generate quick, stylish color palettes. Lock colors you love, copy hex codes, and save palettes locally in your browser. No sign‑in needed.</p>
+</section>
+</main>
+
+<!-- Toast notification -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Template for color swatches -->
+<template id="swatch-template">
+<article class="swatch" data-locked="false">
+<div class="swatch-color"></div>
+<div class="swatch-meta">
+<input class="hex" size="8" maxlength="7" spellcheck="false" />
+<div class="tools">
+<button class="iconbtn lock" aria-pressed="false" title="Lock / Unlock">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8h-1V6a4 4 0 10-8 0v2H7a2 2 0 00-2 2v8a2 2 0 002 2h10a2 2 0 002-2v-8a2 2 0 00-2-2zm-6 0V6a2 2 0 114 0v2h-4z"/></svg>
+</button>
+<button class="iconbtn copy" title="Copy hex">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 00-2 2v12h2V3h12V1zm3 4H8a2 2 0 00-2 2v14a2 2 0 002 2h11a2 2 0 002-2V7a2 2 0 00-2-2zm0 16H8V7h11v14z"/></svg>
+</button>
+</div>
+</div>
+</article>
+</template>
+
+<!-- Link external script -->
+<script src="Final_Color_Script.js"></script>
+
+</body>
+
+</html>
